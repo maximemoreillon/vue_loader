@@ -1,14 +1,27 @@
 <template>
   <div class="loader_wrapper">
 
-    <div class="loader"/>
+    <!-- the spinner -->
+    <div class="spinner"/>
 
+    <!-- message if passed as prop -->
     <div
       v-if="message"
       v-bind:class="{blinking: blinking}"
       class="loader_message">
       {{message}}
     </div>
+
+    <!-- message if passed using slot -->
+    <div
+      v-if="$slots.default"
+      v-bind:class="{blinking: blinking}"
+      class="loader_message">
+      <slot />
+    </div>
+
+
+
   </div>
 </template>
 
@@ -35,11 +48,11 @@ export default {
 }
 
 .loader_wrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
-.loader {
+.spinner {
 
   width: 1em;
   height: 1em;

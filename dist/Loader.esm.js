@@ -12,6 +12,18 @@
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -164,13 +176,22 @@ var __vue_render__ = function() {
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
   return _c("div", { staticClass: "loader_wrapper" }, [
-    _c("div", { staticClass: "loader" }),
+    _c("div", { staticClass: "spinner" }),
     _vm._v(" "),
     _vm.message
       ? _c(
           "div",
           { staticClass: "loader_message", class: { blinking: _vm.blinking } },
           [_vm._v("\n    " + _vm._s(_vm.message) + "\n  ")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.$slots.default
+      ? _c(
+          "div",
+          { staticClass: "loader_message", class: { blinking: _vm.blinking } },
+          [_vm._t("default")],
+          2
         )
       : _vm._e()
   ])
@@ -181,11 +202,11 @@ __vue_render__._withStripped = true;
   /* style */
   var __vue_inject_styles__ = function (inject) {
     if (!inject) { return }
-    inject("data-v-68016828_0", { source: "\n*[data-v-68016828] {\r\n  box-sizing: border-box;\n}\n.loader_wrapper[data-v-68016828] {\r\n  display: flex;\r\n  align-items: center;\n}\n.loader[data-v-68016828] {\r\n\r\n  width: 1em;\r\n  height: 1em;\r\n\r\n  border-width: 0.05em;\r\n  border-radius: 100%;\r\n  border-style: solid;\r\n  border-color: currentColor transparent currentColor transparent;\r\n\r\n  animation-name: spinner_rotation-data-v-68016828;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\n}\n.loader_message[data-v-68016828] {\r\n  margin-left: 0.5em;\n}\n.loader_message.blinking[data-v-68016828] {\r\n  animation-name: blinking_text-data-v-68016828;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\r\n  animation-direction: alternate;\n}\n@keyframes spinner_rotation-data-v-68016828 {\n0% {transform: rotate(0deg);}\n100% {transform: rotate(360deg);}\n}\n@keyframes blinking_text-data-v-68016828 {\n0% {opacity: 0;}\n100% {opacity: 1;}\n}\r\n\r\n\r\n", map: {"version":3,"sources":["/home/moreillon/vue/vue_loader/src/Loader.vue"],"names":[],"mappings":";AAgCA;EACA,sBAAA;AACA;AAEA;EACA,aAAA;EACA,mBAAA;AACA;AAEA;;EAEA,UAAA;EACA,WAAA;;EAEA,oBAAA;EACA,mBAAA;EACA,mBAAA;EACA,+DAAA;;EAEA,gDAAA;EACA,sBAAA;EACA,mCAAA;EACA,iCAAA;AACA;AAEA;EACA,kBAAA;AACA;AAEA;EACA,6CAAA;EACA,sBAAA;EACA,mCAAA;EACA,iCAAA;EACA,8BAAA;AACA;AAEA;AACA,IAAA,uBAAA,CAAA;AACA,MAAA,yBAAA,CAAA;AACA;AAEA;AACA,IAAA,UAAA,CAAA;AACA,MAAA,UAAA,CAAA;AACA","file":"Loader.vue","sourcesContent":["<template>\r\n  <div class=\"loader_wrapper\">\r\n\r\n    <div class=\"loader\"/>\r\n\r\n    <div\r\n      v-if=\"message\"\r\n      v-bind:class=\"{blinking: blinking}\"\r\n      class=\"loader_message\">\r\n      {{message}}\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\n\r\n\r\nexport default {\r\n  name: 'Loader',\r\n  props: {\r\n    message: String,\r\n    blinking: {\r\n      type: Boolean,\r\n      default(){return true}\r\n    }\r\n  },\r\n\r\n}\r\n</script>\r\n\r\n<!-- Add \"scoped\" attribute to limit CSS to this component only -->\r\n<style scoped>\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.loader_wrapper {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.loader {\r\n\r\n  width: 1em;\r\n  height: 1em;\r\n\r\n  border-width: 0.05em;\r\n  border-radius: 100%;\r\n  border-style: solid;\r\n  border-color: currentColor transparent currentColor transparent;\r\n\r\n  animation-name: spinner_rotation;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\r\n}\r\n\r\n.loader_message {\r\n  margin-left: 0.5em;\r\n}\r\n\r\n.loader_message.blinking {\r\n  animation-name: blinking_text;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\r\n  animation-direction: alternate;\r\n}\r\n\r\n@keyframes spinner_rotation {\r\n  0% {transform: rotate(0deg);}\r\n  100% {transform: rotate(360deg);}\r\n}\r\n\r\n@keyframes blinking_text {\r\n  0% {opacity: 0;}\r\n  100% {opacity: 1;}\r\n}\r\n\r\n\r\n</style>\r\n"]}, media: undefined });
+    inject("data-v-56c46d65_0", { source: "\n*[data-v-56c46d65] {\r\n  box-sizing: border-box;\n}\n.loader_wrapper[data-v-56c46d65] {\r\n  display: inline-flex;\r\n  align-items: center;\n}\n.spinner[data-v-56c46d65] {\r\n\r\n  width: 1em;\r\n  height: 1em;\r\n\r\n  border-width: 0.05em;\r\n  border-radius: 100%;\r\n  border-style: solid;\r\n  border-color: currentColor transparent currentColor transparent;\r\n\r\n  animation-name: spinner_rotation-data-v-56c46d65;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\n}\n.loader_message[data-v-56c46d65] {\r\n  margin-left: 0.5em;\n}\n.loader_message.blinking[data-v-56c46d65] {\r\n  animation-name: blinking_text-data-v-56c46d65;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\r\n  animation-direction: alternate;\n}\n@keyframes spinner_rotation-data-v-56c46d65 {\n0% {transform: rotate(0deg);}\n100% {transform: rotate(360deg);}\n}\n@keyframes blinking_text-data-v-56c46d65 {\n0% {opacity: 0;}\n100% {opacity: 1;}\n}\r\n\r\n\r\n", map: {"version":3,"sources":["/home/moreillon/vue/vue_loader/src/Loader.vue"],"names":[],"mappings":";AA4CA;EACA,sBAAA;AACA;AAEA;EACA,oBAAA;EACA,mBAAA;AACA;AAEA;;EAEA,UAAA;EACA,WAAA;;EAEA,oBAAA;EACA,mBAAA;EACA,mBAAA;EACA,+DAAA;;EAEA,gDAAA;EACA,sBAAA;EACA,mCAAA;EACA,iCAAA;AACA;AAEA;EACA,kBAAA;AACA;AAEA;EACA,6CAAA;EACA,sBAAA;EACA,mCAAA;EACA,iCAAA;EACA,8BAAA;AACA;AAEA;AACA,IAAA,uBAAA,CAAA;AACA,MAAA,yBAAA,CAAA;AACA;AAEA;AACA,IAAA,UAAA,CAAA;AACA,MAAA,UAAA,CAAA;AACA","file":"Loader.vue","sourcesContent":["<template>\r\n  <div class=\"loader_wrapper\">\r\n\r\n    <!-- the spinner -->\r\n    <div class=\"spinner\"/>\r\n\r\n    <!-- message if passed as prop -->\r\n    <div\r\n      v-if=\"message\"\r\n      v-bind:class=\"{blinking: blinking}\"\r\n      class=\"loader_message\">\r\n      {{message}}\r\n    </div>\r\n\r\n    <div\r\n      v-if=\"$slots.default\"\r\n      v-bind:class=\"{blinking: blinking}\"\r\n      class=\"loader_message\">\r\n      <slot />\r\n    </div>\r\n\r\n\r\n\r\n  </div>\r\n</template>\r\n\r\n<script>\r\n\r\n\r\nexport default {\r\n  name: 'Loader',\r\n  props: {\r\n    message: String,\r\n    blinking: {\r\n      type: Boolean,\r\n      default(){return true}\r\n    }\r\n  },\r\n\r\n}\r\n</script>\r\n\r\n<!-- Add \"scoped\" attribute to limit CSS to this component only -->\r\n<style scoped>\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n.loader_wrapper {\r\n  display: inline-flex;\r\n  align-items: center;\r\n}\r\n\r\n.spinner {\r\n\r\n  width: 1em;\r\n  height: 1em;\r\n\r\n  border-width: 0.05em;\r\n  border-radius: 100%;\r\n  border-style: solid;\r\n  border-color: currentColor transparent currentColor transparent;\r\n\r\n  animation-name: spinner_rotation;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\r\n}\r\n\r\n.loader_message {\r\n  margin-left: 0.5em;\r\n}\r\n\r\n.loader_message.blinking {\r\n  animation-name: blinking_text;\r\n  animation-duration: 1s;\r\n  animation-iteration-count: infinite;\r\n  animation-timing-function: linear;\r\n  animation-direction: alternate;\r\n}\r\n\r\n@keyframes spinner_rotation {\r\n  0% {transform: rotate(0deg);}\r\n  100% {transform: rotate(360deg);}\r\n}\r\n\r\n@keyframes blinking_text {\r\n  0% {opacity: 0;}\r\n  100% {opacity: 1;}\r\n}\r\n\r\n\r\n</style>\r\n"]}, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__ = "data-v-68016828";
+  var __vue_scope_id__ = "data-v-56c46d65";
   /* module identifier */
   var __vue_module_identifier__ = undefined;
   /* functional template */
