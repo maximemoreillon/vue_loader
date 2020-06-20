@@ -4,15 +4,7 @@
     <!-- the spinner -->
     <div class="spinner"/>
 
-    <!-- message if passed as prop -->
-    <div
-      v-if="message"
-      v-bind:class="{blinking: blinking}"
-      class="loader_message">
-      {{message}}
-    </div>
-
-    <!-- message if passed using slot -->
+    <!-- message -->
     <div
       v-if="$slots.default"
       v-bind:class="{blinking: blinking}"
@@ -31,7 +23,6 @@
 export default {
   name: 'Loader',
   props: {
-    message: String,
     blinking: {
       type: Boolean,
       default(){return true}
