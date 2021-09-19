@@ -1,5 +1,8 @@
 <template>
-  <Loader>Loading...</Loader>
+  <div class="container">
+    <Loader>Loading...</Loader>
+  </div>
+
 </template>
 
 <script>
@@ -10,3 +13,8 @@ export default {
   components: { Loader }
 }
 </script>
+<style .scoped>
+.container{
+  font-size: 200%;
+}
+</style>

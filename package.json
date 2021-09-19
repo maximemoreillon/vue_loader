@@ -1,6 +1,6 @@
 {
   "name": "@moreillon/vue_loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/Loader.umd.js",
   "unpkg": "dist/Loader.umd.min.js",
   "module": "dist/Loader.esm.js",
